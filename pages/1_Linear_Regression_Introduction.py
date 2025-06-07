@@ -18,7 +18,7 @@ if uploaded_file:
     lin_reg = LinearRegressionModel(df)
     if lin_reg.select_features():
         lin_reg.train_model()
-        lin_reg.display_results()
+        #lin_reg.display_results()
 else:
     st.info("Upload a CSV file to get started!")
 
