@@ -48,7 +48,7 @@ pip install -r requirements.txt
 4. **Run the app**
 
 ```bash
-streamlit run Welcome.py
+streamlit run streamlit_app.py
 ```
 
 ## Usage
