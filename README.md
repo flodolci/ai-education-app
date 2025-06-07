@@ -29,7 +29,7 @@ Follow these steps to download and run the app on your local machine:
 
 ```bash
 git clone git@github.com:flodolci/ai-education-app.git
-cd ai-explorers-linear-regression
+cd ai-education-app
 ```
 
 2. **Create a virtual environment (recommended)**
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 4. **Run the app**
 
 ```bash
-streamlit run app.py
+streamlit run Welcome.py
 ```
 
 ## Usage

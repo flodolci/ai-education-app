@@ -1,6 +1,6 @@
-# Welcome to the **AI Explorers Playground**!
+# Introduction to Linear Regression!
 
-Today, we'll dive into the world of **Linear Regression**, discovering its mathematics step by step. Think of linear regression as your gateway to understanding 
+Today, we'll start our journey by diving into the world of **Linear Regression**, discovering its mathematics step by step. Think of linear regression as your gateway to understanding 
 the basics of AI - an intuitive and accessible model whose potential is often underestimated.
 
 You're invited to upload your own CSV file below to see how linear regression works on your data. At the end of the analysis, you'll find a detailed explanation of 
