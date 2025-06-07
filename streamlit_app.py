@@ -10,9 +10,20 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 EXPLAINER_PATH = BASE_DIR / "texts/linear_regression_explainer.md"
 INTRO_PATH = BASE_DIR / "texts/linear_regression_intro.md"
+COEFF_PATH = BASE_DIR / "texts/linear_regression_coeffs.md"
 
 st.set_page_config(page_title="AI Explorers: Linear Regression", layout="wide")
-st.title("AI Explorers: Linear Regression Playground")
+
+def load_css(css_file_path: Path):
+    with css_file_path.open("r", encoding="utf-8") as css_file:
+        css = css_file.read()
+    st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
+
+# Specify the CSS file path
+CSS_PATH = BASE_DIR / "assets" / "style.css"
+
+# Load custom CSS
+load_css(CSS_PATH)
 
 # Linear Regression Intro
 with INTRO_PATH.open("r", encoding="utf-8") as f:
@@ -48,20 +59,20 @@ if uploaded_file:
         # Show coefficients 
         slope = model.coef_.item()
         intercept = float(model.intercept_)
-        st.markdown(f"""
+        
+        coeff_text = f'''
         ### What did the computer learn?
         The computer found this **equation**:
         $$
-        \n\\[
         \\hat{{y}} = {slope:.3f} \\times {x_col} + {intercept:.3f}          
-        \\]
         $$
         where:
-        - \\( \\hat{{y}} \\) is the **predicted value**
+        - $\\hat{{y}}$ is the **predicted value**
         - {x_col} is your **input feature**
         - **{slope:.3f}** is the **slope (coefficient)** - it shows how much {y_col} changes when {x_col} increases by 1.
         - **{intercept:.3f}** is the **intercept** - the value of {y_col} when {x_col} is zero.
-        """)
+        '''
+        st.markdown(coeff_text)
 
         # Show residuals
         residuals = y - prediction
