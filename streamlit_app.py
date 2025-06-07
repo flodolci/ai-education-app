@@ -12,7 +12,7 @@ EXPLAINER_PATH = BASE_DIR / "texts/linear_regression_explainer.md"
 INTRO_PATH = BASE_DIR / "texts/linear_regression_intro.md"
 COEFF_PATH = BASE_DIR / "texts/linear_regression_coeffs.md"
 
-st.set_page_config(page_title="AI Explorers: Linear Regression", layout="wide")
+st.set_page_config(page_title="AI Explorers: Linear Regression", layout="centered")
 
 def load_css(css_file_path: Path):
     with css_file_path.open("r", encoding="utf-8") as css_file:
